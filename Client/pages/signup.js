@@ -23,7 +23,7 @@ const Apply = () => {
   function handleRegister(e) {
     e.preventDefault();
 
-    fetch('http://localhost:8000/api/register', {
+    fetch(`${process.env.BASE_URL}/api/register`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

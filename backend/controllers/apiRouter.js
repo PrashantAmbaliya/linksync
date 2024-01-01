@@ -4,6 +4,9 @@ const { createJWT, verifyJWT } = require('../auth/jwtAuth')
 
 const apiRouter = express.Router();
 
+apiRouter.get('/get',(req,res)  => {
+    res.send("Server is Running")
+})
 
 apiRouter.post('/api/register', async (req, res) => {
     const { handle, email, password, username } = req.body;

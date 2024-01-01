@@ -17,7 +17,7 @@ export default function DashboardHeader() {
     if (!localStorage.getItem('Token')) {
       return router.push('/login')
     }
-    fetch('http://localhost:8000/data/dashbord', {
+    fetch(`${process.env.BASE_URL}/data/dashbord`, {
       method: "POST",
       headers: {
         "Content-type": "application/json"

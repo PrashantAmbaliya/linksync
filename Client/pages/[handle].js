@@ -14,7 +14,7 @@ export default function handle() {
 
     useEffect(() => {
         if (router.query?.handle) {
-            fetch(`http://localhost:8000/get/${router.query.handle}`)
+            fetch(`${process.env.BASE_URL}/get/${router.query.handle}`)
                 .then((res) => {
                     if (res.status !== 200) {
                         setHandleFound(false)

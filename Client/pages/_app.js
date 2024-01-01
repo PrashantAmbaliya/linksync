@@ -45,6 +45,12 @@ export default function App({ Component, pageProps }) {
         <meta property="og:image" content="https://linksync-psi.vercel.app/images/linksync-prev.png" />
         <meta property="og:url" content={`https://linksync-psi.vercel.app${router.asPath}`} />
         <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yourtwitterhandle" />
+        <meta name="twitter:title" content="Linksync - Your Ultimate Links Manager" />
+        <meta name="twitter:description" content="Seamlessly manage and share multiple links with Linksync. Elevate your online presence effortlessly." />
+        <meta name="twitter:image" content="https://linksync-psi.vercel.app/images/linksync-prev.png" />
       </Head>
 
       <NavBar />

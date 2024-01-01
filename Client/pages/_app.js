@@ -5,6 +5,7 @@ import UserContext from "@/context/userContext";
 import NavBar from "../components/Navbar";
 import NProgress from 'nprogress';
 import '../public/nprogress.css';
+import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Script from 'next/script';
@@ -38,6 +39,14 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta property="og:title" content="Linksync - Your Ultimate Links Manager" />
+        <meta property="og:description" content="Seamlessly manage and share multiple links with Linksync. Elevate your online presence effortlessly." />
+        <meta property="og:image" content="/images/linksync-prev.png" />
+        <meta property="og:url" content={`https://linksync-psi.vercel.app${router.asPath}`} />
+        <meta property="og:type" content="website" />
+      </Head>
+
       <NavBar />
       <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-WYTYXQXVK6`} />
       <Script strategy="lazyOnload">
@@ -50,7 +59,7 @@ export default function App({ Component, pageProps }) {
                     });
                 `}
       </Script>
-      <UserContext.Provider value={{UserData, setUserData}}>
+      <UserContext.Provider value={{ UserData, setUserData }}>
         <Component {...pageProps} />
       </UserContext.Provider>
       <ToastContainer />

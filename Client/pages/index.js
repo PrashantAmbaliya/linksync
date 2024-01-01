@@ -5,6 +5,12 @@ export default function Home() {
   const [handle, setHandle] = useState('');
   const router = useRouter();
 
+  useEffect(() => {
+    if(localStorage.getItem('Token')){
+      router.push('/dashbord')
+    }
+}, [])
+
   function handleSubmit(e){
     e.preventDefault();
     

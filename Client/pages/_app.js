@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta property="og:title" content="Linksync - Your Ultimate Links Manager" />
         <meta property="og:description" content="Seamlessly manage and share multiple links with Linksync. Elevate your online presence effortlessly." />
-        <meta property="og:image" content="/images/linksync-prev.png" />
+        <meta property="og:image" content="https://linksync-psi.vercel.app/images/linksync-prev.png" />
         <meta property="og:url" content={`https://linksync-psi.vercel.app${router.asPath}`} />
         <meta property="og:type" content="website" />
       </Head>

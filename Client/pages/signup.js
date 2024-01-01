@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 const Apply = () => {
 
   const [handle, setHandle] = useState('');
-  const [usename, setusename] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,7 +28,7 @@ const Apply = () => {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify({ handle, email, password, usename })
+      body: JSON.stringify({ handle, email, password, username })
     })
       .then((res) => {
         if (!res.ok) {
@@ -57,7 +57,7 @@ const Apply = () => {
             <div className="">
               <form onSubmit={handleRegister} className="flex flex-col gap-3">
                 <input value={handle} onChange={(e) => setHandle(e.target.value)} className="border-2 border-gray-100  text-black shadow-lg p-2 rounded-lg focus:outline-none autofocus" type="text" placeholder='Social Handle Name' required />
-                <input value={usename} onChange={(e) => setusename(e.target.value)} className="border-2 border-gray-100  text-black shadow-lg p-2 rounded-lg focus:outline-none autofocus" type="text" placeholder='Username' required />
+                <input value={username} onChange={(e) => setUsername(e.target.value)} className="border-2 border-gray-100  text-black shadow-lg p-2 rounded-lg focus:outline-none autofocus" type="text" placeholder='Username' required />
                 <input value={email} onChange={(e) => setEmail(e.target.value)} className="border-2 border-gray-100  text-black shadow-lg p-2 rounded-lg focus:outline-none autofocus" type="email" placeholder='Enter your email' required />
                 <input value={password} onChange={(e) => setPassword(e.target.value)} className="border-2 border-gray-100  text-black shadow-lg p-2 rounded-lg focus:outline-none autofocus" type="password" placeholder='Enter your password' required />
                 <button className="bg-blue-700 mb-1 mt-4 transition ease-in-out delay-80 hover:scale-105 text-white p-2 rounded-lg" type="submit">Create Account</button>

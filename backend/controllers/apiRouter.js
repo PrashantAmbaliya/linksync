@@ -4,7 +4,7 @@ const { createJWT, verifyJWT } = require('../auth/jwtAuth')
 
 const apiRouter = express.Router();
 
-apiRouter.get('/get',(req,res)  => {
+apiRouter.get('/',(req,res)  => {
     res.send("Server is Running")
 })
 

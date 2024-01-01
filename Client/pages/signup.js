@@ -23,7 +23,7 @@ const Apply = () => {
   function handleRegister(e) {
     e.preventDefault();
 
-    fetch(`${process.env.BASE_URL}/api/register`, {
+    fetch(`https://linksync-server.onrender.com/api/register`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

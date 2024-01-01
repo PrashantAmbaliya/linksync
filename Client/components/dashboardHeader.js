@@ -17,7 +17,7 @@ export default function DashboardHeader() {
     if (!localStorage.getItem('Token')) {
       return router.push('/login')
     }
-    fetch(`${process.env.BASE_URL}/data/dashbord`, {
+    fetch(`https://linksync-server.onrender.com/data/dashbord`, {
       method: "POST",
       headers: {
         "Content-type": "application/json"

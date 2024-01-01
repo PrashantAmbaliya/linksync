@@ -14,7 +14,7 @@ const Login = () => {
   function handleLogin(e){
     e.preventDefault()
 
-    fetch(`${process.env.BASE_URL}/api/login`, {
+    fetch(`https://linksync-server.onrender.com/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

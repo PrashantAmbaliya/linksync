@@ -14,7 +14,7 @@ export default function handle() {
 
     useEffect(() => {
         if (router.query?.handle) {
-            fetch(`${process.env.BASE_URL}/get/${router.query.handle}`)
+            fetch(`https://linksync-server.onrender.com/get/${router.query.handle}`)
                 .then((res) => {
                     if (res.status !== 200) {
                         setHandleFound(false)

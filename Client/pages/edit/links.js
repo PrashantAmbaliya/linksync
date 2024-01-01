@@ -62,7 +62,7 @@ export default function profile() {
             return router.push('/login')
         }
 
-        fetch('http://localhost:8000/edit/links', {
+        fetch('https://linksync-server.onrender.com/edit/links', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

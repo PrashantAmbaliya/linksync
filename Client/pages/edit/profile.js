@@ -47,7 +47,7 @@ export default function profile() {
             return router.push('/login')
         }
 
-        fetch('http://localhost:8000/edit/profile', {
+        fetch('https://linksync-server.onrender.com/edit/profile', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export default function profile() {
             return router.push('/login')
         }
 
-        fetch('http://localhost:8000/edit/socialmedia', {
+        fetch('https://linksync-server.onrender.com/edit/socialmedia', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

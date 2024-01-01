@@ -10,6 +10,7 @@ apiRouter.get('/get',(req,res)  => {
 
 apiRouter.post('/api/register', async (req, res) => {
     const { handle, email, password, username } = req.body;
+    console.log("Register",handle, email, password, username);
 
     try {
         const Result = await userModel.create({ handle, email, password, username })

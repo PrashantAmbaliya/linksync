@@ -1,19 +1,19 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [handle, setHandle] = useState('');
   const router = useRouter();
 
   useEffect(() => {
-    if(localStorage.getItem('Token')){
+    if (localStorage.getItem('Token')) {
       router.push('/dashbord')
     }
-}, [])
+  }, [])
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
-    
+
     router.push({
       pathname: '/signup',
       query: { handle },
